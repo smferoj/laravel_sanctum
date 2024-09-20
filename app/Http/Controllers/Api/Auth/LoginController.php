@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
+    public function __construct(){
+        $this->middleware('guest');
+    } 
+    
     public function __invoke(LoginRequest $request)
     {
     $user = User::where('email', $request->email)->first();
