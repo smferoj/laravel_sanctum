@@ -22,3 +22,9 @@ php artisan make:request LoginRequest
 
  php artisan make:mail ResetPasswordLink --markdown=emails.reset_password_link
  php artisan make:request LinkEmailRequest
+
+ // Email verification 
+
+ php artisan make:mail EmailVerification --markdown=emails.email_verfication
+
+ //  For touching Dashboard must write class User extends Authenticatable implements MustVerifyEmail 
