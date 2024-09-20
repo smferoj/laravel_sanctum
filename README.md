@@ -17,3 +17,8 @@ php artisan make:request LoginRequest
 
 => GetUser 
  Need to check authorization in postman(Select BearerToken and need to set token )
+
+ php artisan make:controller Api/Auth/PasswordResetController
+
+ php artisan make:mail ResetPasswordLink --markdown=emails.reset_password_link
+ php artisan make:request LinkEmailRequest
